@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="text-center">
+        <mat-form-field class="example-full-width mt-3">
+            <mat-label>Search Patient</mat-label>
+            <input matInput placeholder="Search" value="">
+        </mat-form-field>
+        <span class="material-icons">search</span>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-3 my-3" *ngFor="let date of dates">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar>
+                        <span class="material-icons">
+                            account_circle
+                        </span>
+                    </div>
+                    {{ date.patientName }} {{ date.patientSurName }}
+                </mat-card-header>
+                <hr>
+                <mat-card-content class="text-justify">
+                    <div>Especialty: {{ date.specialty }}</div>
+                    <hr>
+                    <div>{{ date.date }}</div>
+                    <hr>
+                    <div>Status Date: {{ date.status }}</div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

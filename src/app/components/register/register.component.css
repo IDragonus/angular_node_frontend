@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 7vh;
+}
+  
+.circle {
+    width: 30vh;
+    height: 30vh;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    color: #141414;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+a {
+    color: aliceblue;
+    text-align: right;
+    text-decoration: none;
+}
