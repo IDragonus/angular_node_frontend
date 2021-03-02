@@ -7,7 +7,7 @@
         <span class="material-icons">search</span>
     </div>
     <div class="row">
-        <div class="col-12 col-md-3 my-3" *ngFor="let date of dates">
+        <div class="col-12 col-md-3 my-3" *ngFor="let patient of userData">
             <mat-card>
                 <mat-card-header>
                     <div mat-card-avatar>
@@ -15,15 +15,17 @@
                             account_circle
                         </span>
                     </div>
-                    {{ date.patientName }} {{ date.patientSurName }}
+                    <div class="text-white">
+                        <a [routerLink]="['/patient', patient.id]">
+                            Paciente:<br> {{ patient.name }} {{ patient.lastName }}
+                        </a>
+                    </div>
                 </mat-card-header>
                 <hr>
                 <mat-card-content class="text-justify">
-                    <div>Especialty: {{ date.specialty }}</div>
+                    <div>Especialty: {{ patient.consultation }}</div>
                     <hr>
-                    <div>{{ date.date }}</div>
-                    <hr>
-                    <div>Status Date: {{ date.status }}</div>
+                    <div>Appointment status: {{ patient.status }} </div>
                 </mat-card-content>
             </mat-card>
         </div>

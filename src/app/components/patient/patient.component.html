@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+        <h1 class="text-danger text-center">Paciente: {{ name }} {{ lastName }}</h1>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-3 my-3" *ngFor="let i of date">
+            <mat-card>
+                <mat-card-header class="text-justify">
+                    <div>
+                        <a>
+                            <!-- Paciente:<br> -->
+                            <!-- {{ i.name }} {{ i.lastName }} -->
+                        </a>
+                    </div>
+                </mat-card-header>
+                <hr>
+                <mat-card-content class="text-justify">
+                    <div>Specialty: <br>
+                        {{ i.specialty }}
+                    </div>
+                    <hr>
+                    <div>Appointment status: <br>
+                        {{ i.status }}
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a (click)="edit(i)">
+                        <i class="material-icons">
+                            edit
+                        </i>
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

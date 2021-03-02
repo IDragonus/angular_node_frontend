@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="editAppoint" (ngSubmit)="editAppo(editAppoint)">
+        <mat-card class="example-card">
+            <h3 class="text-center">Edit</h3>
+            <hr>
+            <mat-card-content>
+
+                <div class="row">
+                    <div class="col-12">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Status:</mat-label>
+                            <input type="text" maxlength="20" matInput placeholder="Status" formControlName="status">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Observations:</mat-label>
+                            <input type="text" maxlength="50" matInput placeholder="Observations"
+                                formControlName="observations">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+            <hr>
+            <mat-card-actions class="text-center">
+                <button class="btn btn-primary example-full-width mb-3">Edit</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</div>
